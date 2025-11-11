@@ -283,10 +283,10 @@ class KGRS:
                  kg_lines: List[str], n_user: int, n_item: int):
         # Change the code work directory to the root dir of our submit
         os.chdir(os.path.dirname(os.path.abspath(__file__)))
-        config = {"batch_size": 256, "eval_batch_size": 1024,
-                  "emb_dim": 32, "l1": True, "margin": 20,
+        config = {"batch_size": 128, "eval_batch_size": 1024,
+                  "emb_dim": 32, "l1": True, "margin": 10,
                   "learning_rate": 2e-3, "weight_decay": 1e-4,
-                  "neg_rate": 2.0, "epoch_num": 40}
+                  "neg_rate": 2.0, "epoch_num": 50}
         self.batch_size = config["batch_size"]
         self.eval_batch_size = config["eval_batch_size"]
         self.neg_rate = config["neg_rate"]
